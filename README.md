@@ -3,3 +3,4 @@
 - https://github.com/github/gitignore
 - https://github.com/github/opensource.guide
 - https://github.com/github/choosealicense.com
+- https://kontext.tech/article/308/how-to-install-windows-subsystem-for-linux-on-a-non-c-drive
