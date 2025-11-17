@@ -36,9 +36,9 @@ Host github-university
   IdentityFile ~/.ssh/github_uni_key_rsa
 ```
 
-  - Save and exit the text editor.
-  - Clone a Git repository using your SSH key:
-  - For your personal account:
-      - `$ git clone git@github.com:username/repo.git`
-  - For your university account:
-      - `$ git clone git@github-university:username/repo.git`
+- Save and exit the text editor.
+- Clone a Git repository using your SSH key:
+- For your personal account:
+    - `$ git clone git@github.com:username/repo.git`
+- For your university account:
+    - `$ git clone git@github-university:username/repo.git`
