@@ -1,5 +1,7 @@
 # Git CLI
 
+>`$` marks the beginning of a command line instruction.
+
 ## Init:
 
   - `$ git init`
@@ -8,6 +10,7 @@
 ## Check info:
 
   - `$ git status` -\> *show only local changes*
+    - `$ git status -u` -\> *show untracked files as well (otherwise might be collapsed into directory)*
   - `$ git log` -\> *show all commits to branch*
   - `$ git branch` -\> *list all branches*
 
@@ -81,3 +84,42 @@ Fetching tags from a remote repository, if they are not automatically fetched:
 ### Viewing Tag History
 
   - `$ git log --tags`
+
+### Tag Naming Conventions (Summary)
+
+  * **Format:** Use [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
+      * Example: `v1.2.3`
+      * Prefix with `v` (common convention)
+  * **Stable releases:** `v1.0.0`, `v2.3.1`
+  * **Pre-releases:**
+      * Alpha (early, unstable): `v1.0.0-alpha`, `v1.0.0-alpha.1`
+      * Beta (feature complete, unstable): `v1.0.0-beta`, `v1.0.0-beta.2`
+      * Release candidate (potential final): `v1.0.0-rc.1`, `v1.0.0-rc.2`
+  * **Other conventions:**
+      * Nightly/Dev: `v1.0.0-nightly.20250908`, `v2.1.0-dev`
+      * Hotfix: `v1.0.1-hotfix`
+      * Long-term support: `v1.2.0-lts`
+  * **Best practices:**
+      * Use annotated tags: `git tag -a v1.0.0 -m "Release version 1.0.0"`
+      * Push tags explicitly: `git push origin v1.0.0`
+      * Tags should be immutable — never reuse for different code
+      * Be consistent with your naming
+      * Avoid moving tags like `latest` or `stable`
+
+### Git Stash
+
+  * `$ git stash` -\> stash current changes
+  * `$ git stash push -m "custom message"` -\> stash with a message
+  * `$ git stash list` -\> list all stashes
+  * `$ git stash apply stash@{n}` -\> apply a specific stash
+  * `$ git stash drop stash@{n}` -\> delete a specific stash
+  * `$ git stash clear` -\> clear all stashes
+
+### Git Conflicts
+
+| Command | Type | Usage |
+| :--- | :--- | :--- |
+| `$ git pull origin main` | Fast-forward merge | Use when local is just behind remote, no conflicts. |
+| `$ git pull origin main --no-rebase` | Regular merge | Use when you want to preserve both histories, even if messy. |
+| `$ git pull --rebase origin main` | Rebase | Use in teamwork to keep history clean and linear, safer than force. |
+| `$ git push --force-with-lease origin main` | Force push | Use only when you amended/rebased already-pushed commits and you’re sure no one else is depending on them. |
