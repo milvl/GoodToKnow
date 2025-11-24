@@ -12,6 +12,7 @@
   - `$ git status` -\> *show only local changes*
     - `$ git status -u` -\> *show untracked files as well (otherwise might be collapsed into directory)*
   - `$ git log` -\> *show all commits to branch*
+    - `$ git log -p -- path/to/file.ext` -\> *show incremental changes to a specific file*
   - `$ git branch` -\> *list all branches*
 
 ## Update:
