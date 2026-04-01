@@ -12,6 +12,7 @@
 | **python** | [`./python/sphinx_docs.md`](./python/sphinx_docs.md) | Sphinx Documentation Setup |
 | **ssh** | [`./ssh/keys.md`](./ssh/keys.md) | SSH Keys & Config |
 | **vim** | [`./vim/neovim_plugins.md`](./vim/neovim_plugins.md) | Neovim Plugin Setup |
+| **apt** | [`./apt/repo_issues.md`](./apt/repo_issues.md) | Issues with repos in `apt` |
 
 ## Other OK Sources
 - https://onedrive.live.com/redir?resid=70638F0A95347675%21111&authkey=%21AGjkdh1sCWxObgw&page=View&wd=target%28Authentification.one%7C%2FSSH%7Cf383c931-b0a8-4640-8e70-0fcb47836c55%2F%29&wdorigin=NavigationUrl
